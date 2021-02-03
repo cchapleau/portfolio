@@ -14,3 +14,4 @@ easy_admin:
           - {entity: 'Project', label: 'Projets', icon: 'th-list'}
           - {entity: 'Image', label: 'Librairie', icon: 'photo-video'}
           - {entity: 'Client', label: 'Clients', icon: 'users'}
+      - { label: 'Aller sur le site', icon: 'globe', url: '/' }
