@@ -1,0 +1,20 @@
+easy_admin:
+  entities:
+    Project:
+      class: App\Entity\Project
+      list:
+        actions:
+          - {name: 'show', icon: 'eye', label: false, css_class: 'btn btn-primary'}
+          - {name: 'edit', icon: 'paint-brush', label: false, css_class: 'btn btn-secondary'}
+          - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
+        # item_permission: 'ROLE_ADMIN'
+      form:
+        fields:
+          - {property: 'name', label: 'Nom du projet'}
+          - {property: 'client', label: 'Client'}
+          - {property: 'slug'}
+          - {property: 'date', label: 'Date de livraison'}
+          - {property: 'technologies', label: 'Technologie(s) utilisée(s)'}
+          - {property: 'resume', label: 'Résumé du projet'}
+          - {property: 'title', label: 'Titre du projet'}
+          - {property: 'content', label: 'Description du projet'}
