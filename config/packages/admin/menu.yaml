@@ -1,0 +1,16 @@
+easy_admin:
+  design:
+    brand_color: '#FF803E'
+    menu:
+      - label: 'Administration'
+        icon: 'users-cog'
+        children:
+          - {entity: 'User', label: 'Utilisateurs', icon: 'user-circle'}
+          - {entity: 'Category', label: 'Catégories', icon: 'folder-open'}
+          - {entity: 'Technology', label: 'Technologies', icon: 'tools'}
+      - label: 'Projets clients'
+        icon: 'file-signature'
+        children:
+          - {entity: 'Project', label: 'Projets', icon: 'th-list'}
+          - {entity: 'Image', label: 'Librairie', icon: 'photo-video'}
+          - {entity: 'Client', label: 'Clients', icon: 'users'}

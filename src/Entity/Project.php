@@ -6,6 +6,7 @@ use App\Repository\ProjectRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ProjectRepository::class)
@@ -63,6 +64,12 @@ class Project
      * @ORM\ManyToOne(targetEntity=Client::class, inversedBy="project")
      */
     private $client;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\Regex(pattern="/^[a-z0-9\-]+$/")
+     */
+    private $slug;
 
     public function __construct()
     {
@@ -228,6 +235,18 @@ class Project
     public function setClient(?Client $client): self
     {
         $this->client = $client;
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
 
         return $this;
     }
