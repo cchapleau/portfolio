@@ -13,22 +13,27 @@ class ClientFixtures extends Fixture
         $client = new Client();
         $client->setName('Wild Code School');
         $manager->persist($client);
+        $this->addReference('client_wild', $client);
 
         $client = new Client();
         $client->setName('WiziFarm');
         $manager->persist($client);
+        $this->addReference('client_wizi', $client);
 
         $client = new Client();
         $client->setName('La Pellicule Ensorcelée');
         $manager->persist($client);
+        $this->addReference('client_pellicule', $client);
 
         $client = new Client();
         $client->setName('Saint-Ex');
         $manager->persist($client);
+        $this->addReference('client_saint_ex', $client);
 
         $client = new Client();
         $client->setName('Central Fab');
         $manager->persist($client);
+        $this->addReference('client_central', $client);
 
         $manager->flush();
     }
