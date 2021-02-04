@@ -8,6 +8,8 @@ easy_admin:
           - {name: 'edit', icon: 'paint-brush', label: false, css_class: 'btn btn-secondary'}
           - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
         # item_permission: 'ROLE_ADMIN'
+        fields: ['name','poster', {property: 'poster', type: 'image', base_path: '%upload_directory%'}]
       form:
         fields:
           - {property: 'name', label: "Nom de l'image"}
+          - {property: 'posterFile', type: 'vich_image', base_path: '%upload_directory%', label: 'Image'}
