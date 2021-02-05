@@ -28,6 +28,7 @@ class MailController extends AbstractController
                 ->setBody($form->get('message')->getData())
             ;
             $mailer->send($message);
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('mail/index.html.twig', [

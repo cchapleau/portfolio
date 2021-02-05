@@ -18,7 +18,7 @@
     font-size: 27px;
 }
 .header-links {
-    width: 30%;
+    width: 36%;
 }
 .header-links a {
     margin: 0% 5%;
@@ -356,3 +356,35 @@
     text-align: center;
 }
 /* ABOUT - END */
+
+/* RESPONSIVE - BEGIN */
+@media screen and (min-width:900px) {
+    .homepage-intro, .portfolio-intro {
+        font-size: 65px;
+    }
+    .homepage-category .left-part {
+        font-size: 32px;
+    }
+    .contact-form {
+        margin-bottom: 10%;
+    }
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-map {
+        padding: 10%;
+        width: 80%;
+    }
+    .contact-map iframe {
+        width: 100%;
+    }
+    .contact-form-block {
+        padding: 10%;
+        width: 80%;
+    }
+    .form-block-form {
+        padding: 0% 10%;
+    }
+}
+/* RESPONSIVE - END */
