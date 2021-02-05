@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class MailController extends AbstractController
 {
     /**
-     * @Route("/mail", name="mail")
+     * @Route("/contact", name="mail")
      */
     public function index(Request $request, \Swift_Mailer $mailer): Response
     {
