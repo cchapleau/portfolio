@@ -359,11 +359,29 @@
 
 /* RESPONSIVE - BEGIN */
 @media screen and (min-width:900px) {
+    .header, .footer {
+        height: 100px;
+    }
     .homepage-intro, .portfolio-intro {
         font-size: 65px;
     }
     .homepage-category .left-part {
         font-size: 32px;
+    }
+    .category-block {
+        flex-direction: column-reverse;
+        height: 600px;
+    }
+    .homepage-category .left-part {
+        width: 60%;
+        margin-top: 5%;
+    }
+    .homepage-category .right-part {
+        width: 80%;
+        margin: 0;
+    }
+    .homepage-category .right-part img {
+        width: 100%;
     }
     .contact-form {
         margin-bottom: 10%;
