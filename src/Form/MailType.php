@@ -6,6 +6,7 @@ use App\Entity\Mail;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class MailType extends AbstractType
@@ -14,9 +15,9 @@ class MailType extends AbstractType
     {
         $builder
             ->add('email')
-            ->add('subject')
+            ->add('subject', TextType::class, ['label' => 'Sujet'])
             ->add('message')
-            ->add('save', SubmitType::class)
+            ->add('save', SubmitType::class, ['label' => 'Envoyer'])
         ;
     }
 

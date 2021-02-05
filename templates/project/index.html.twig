@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Portfolio{{parent()}}{% endblock %}
+
+{% block body %}
+    <section class="header">
+        <div class="header-brand">Christophe Chapleau</div>
+        <div class="header-links">
+            <a href="/">Accueil</i></a>
+            <a href="/">Portfolio</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </section>
+    <section class="portfolio-banner">
+        <div class="portfolio-intro">{ Mon travail }</div>
+    </section>
+    <section class="portfolio-block">
+        <div class="portfolio-project-block">
+            {% for project in projects %}
+                <div class="project-block">
+                    <div class="project-image">
+                        {% for image in images %}
+                            {% if (image.project.id == project.id) %}
+                                <img class="teet" src="{{ '/uploads/' ~ image.poster }}" alt="teet"/>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="project-text">
+                        <div class="project-name">{{ project.name }}</div>
+                        <div class="project-date">{{ project.date|date ('d-m-Y') }}</div>
+                        <div class="project-technologies">
+                            {% for technology in technologies %}
+                                <span>{{ technology.name }}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="project-content">{{ project.content }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer-brand">&copy;2021 Christophe Chapleau • Tous droits r&eacute;serv&eacute;s</div>
+        <div class="footer-links">
+            <a href="/a-propos">A propos</a>
+        </div>
+    </section>
+{% endblock %}

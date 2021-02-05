@@ -1,11 +1,65 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Accueil{{parent()}}{% endblock %}
 
 {% block body %}
-    <div>
+    <section class="header">
+        <div class="header-brand">Christophe Chapleau</div>
+        <div class="header-links">
+            <a href="/">Accueil</i></a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </section>
+    <section class="homepage-banner">
+        <div class="homepage-intro">{ Welcome }</div>
+        {# <img src="{{ '/build/images/homepage-banner.jpg' }}" alt="Christophe Chapleau • Web Développeur à Reims" /> #}
+    </section>
+    <section class="homepage-category">
+        <div class="category-block">
+            <div class="left-part">Développement Web</div>
+            <div class="right-part">
+                <img src="{{ '/build/images/web-devolpment.jpg' }}" alt="Développement Web à Reims"/>
+            </div>
+        </div>
+        <div class="category-block">
+            <div class="left-part">Identité Visuelle</div>
+            <div class="right-part">
+                <img src="{{ '/build/images/identity.jpg' }}" alt="Web développement à Reims"/>
+            </div>
+        </div>
+        <div class="category-block">
+            <div class="left-part">Communication Print</div>
+            <div class="right-part">
+                <img src="{{ '/build/images/communication-print.jpg' }}" alt="Communication Print à Reims"/>
+            </div>
+        </div>
+        <div class="category-block">
+            <div class="left-part">Design Graphique</div>
+            <div class="right-part">
+                <img src="{{ '/build/images/design.jpg' }}" alt="Design Graphique à Reims"/>
+            </div>
+        </div>
+        <div class="category-block">
+            <div class="left-part">Branding</div>
+            <div class="right-part">
+                <img src="{{ '/build/images/branding.jpg' }}" alt="Branding à Reims"/>
+            </div>
+        </div>
+    </section>
+    <section class="homepage-client">
+        <div class="client-block">BLOCK CLIENT
+        </div>
+    </section>
+    {# <div>
         {% for image in images %}
             <img class="teet" src="{{ '/uploads/' ~ image.poster }}" alt="teet"/>
         {% endfor %}
-    </div>
+    </div> #}
+    <section class="footer">
+        <div class="footer-brand">&copy;2021 Christophe Chapleau • Tous droits r&eacute;serv&eacute;s</div>
+        <div class="footer-links">
+            <a href="/a-propos">A propos</a>
+        </div>
+    </section>
 {% endblock %}
